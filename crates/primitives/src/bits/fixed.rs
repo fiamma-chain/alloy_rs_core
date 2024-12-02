@@ -1,5 +1,6 @@
 use crate::aliases;
 use core::{fmt, iter, ops, str};
+use borsh::{BorshDeserialize, BorshSerialize};
 use derive_more::{Deref, DerefMut, From, Index, IndexMut, IntoIterator};
 use hex::FromHex;
 
@@ -26,6 +27,8 @@ use hex::FromHex;
     Index,
     IndexMut,
     IntoIterator,
+    BorshSerialize,
+    BorshDeserialize,
 )]
 #[cfg_attr(feature = "arbitrary", derive(derive_arbitrary::Arbitrary, proptest_derive::Arbitrary))]
 #[cfg_attr(feature = "allocative", derive(allocative::Allocative))]

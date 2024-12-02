@@ -26,6 +26,7 @@ hex-literal.workspace = true
 hex.workspace = true
 itoa.workspace = true
 ruint.workspace = true
+borsh = { version = "1.5.3", features = ["derive"] }
 
 # macros
 cfg-if.workspace = true
